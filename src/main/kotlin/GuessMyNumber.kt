@@ -1,15 +1,15 @@
 import java.util.*
 
 fun main(args: Array<String>) {
-    val randomNumber = Random().nextInt(101)
-    var notFound = true
-    while(notFound) {
+    val nombreAuHasard = Random().nextInt(101)
+    var pasTrouve = true
+    while(pasTrouve) {
         println("Choisis un nombre entre 0 et 100")
-        val chosenNumber = readLine()!!.toInt()
+        val nombreEssaye = readLine()!!.toInt()
         when {
-            chosenNumber < randomNumber -> println("plus")
-            chosenNumber > randomNumber -> println("moins")
-            else -> notFound = false
+            nombreEssaye < nombreAuHasard -> println("plus")
+            nombreEssaye > nombreAuHasard -> println("moins")
+            else -> pasTrouve = false
         }
     }
     println("OK")
